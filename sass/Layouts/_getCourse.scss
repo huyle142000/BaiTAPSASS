@@ -1,0 +1,207 @@
+#tabula_email {
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+    padding-top: 30px;
+    .tabula_email-img {
+        z-index: 4;
+        .wrap_img-tabula {
+            padding-top: 60px;
+            padding-right: 42px;
+            padding-left: 120px;
+        }
+    }
+
+    .tabula_email-form {
+        z-index: 4;
+        padding-right: 105px;
+        margin-top: 50px;
+        .tabula_wrap-form {
+            border-radius: 10px;
+            box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+            background-color: $color-white;
+            .tabula_wrapper {
+            }
+            padding: 0 28px;
+            h2 {
+                @include styleText($color-black, $fsr-5, $fw4);
+                margin-bottom: 45px;
+                padding-top: 40px;
+            }
+            .tabula_email-name {
+                font-family: "Roboto", sans-serif;
+                padding-right: 15px;
+                margin-bottom: 15px;
+                span {
+                    padding-right: $fsp-2;
+                }
+                input {
+                    transition: all 0.5s;
+                    &:focus{
+                        box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        outline: none;
+                    }
+                    padding: 1em 1em 1em 3.5em;
+                    font-size: $fse-1 - 0.1;
+                    height: 3.7em;
+                    border-radius: 50px;
+                    border-radius: 50px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                }
+                position: relative;
+                i {
+                    color: $color-primary;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 15px;
+                }
+            }
+            .tabula_email-emails {
+                @extend .tabula_email-name;
+            }
+            .tabula_select-wrap {
+                @extend .tabula_email-name;
+
+                .tabula_options {
+                    &.show {
+                        span {
+                            box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                        }
+
+                        .tabula_select {
+                            display: block;
+                            li {
+                                cursor: pointer;
+                                transition: all 0.5s;
+                            }
+                            li:hover {
+                                & {
+                                    color: $color-primary;
+                                }
+                            }
+                        }
+                        .fa-angle-up {
+                            display: block;
+                        }
+                        .fa-angle-down {
+                            display: none;
+                        }
+                    }
+                    .wrap-options {
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        border-radius: 50px;
+                        span {
+                            transition: all 0.5s;
+                            padding-left: 36px;
+                            line-height: 3.2em;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.8;
+                            font-size: 0.8em;
+                            cursor: pointer;
+                            display: block;
+                            border-radius: 50px;
+                            position: relative;
+                            i {
+                                position: absolute;
+                                color: $color-primary;
+                                left: 95%;
+                            }
+                        }
+                    }
+                    .tabula_select {
+                        display: none;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        padding-left: 36px;
+                        opacity: 0.8;
+                        font-size: 0.8em;
+                    }
+                    .fa-angle-down {
+                        display: block;
+                    }
+                    .fa-angle-up {
+                        display: none;
+                    }
+                }
+
+                i {
+                    opacity: 1;
+                    font-size: $fsp-2 - 3px;
+                    z-index: 4;
+                    color: $color-primary;
+                }
+            }
+            .tabula_area-wrap {
+                @extend .tabula_email-name;
+                border-radius: 30px;
+                i {
+                    top: 20px;
+                }
+                textarea {
+                    transition: all 0.5s;
+                    font-size: 0.8em;
+                    width: 100%;
+                    padding-top: 7px;
+                    padding-left: 34px;
+                    height: 90px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    &:focus {
+                        box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        outline: none;
+                    }
+                }
+            }
+            //btn_tabula
+            .btn_tabula-email {
+                width: 150px;
+                margin: 2em 0;
+                margin-bottom: 6em;
+                height: 4em;
+                line-height: 2.8em;
+                letter-spacing: 1px;
+                font-size: $fse-1 - 0.1;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+@include responsive("extra-large") {
+    body {
+        font-size: 14px;
+    }
+    #tabula_email {
+        .tabula_email-img {
+            padding: 0;
+        }
+
+        .tabula_email-form {
+            .tabula_email-name,
+            .tabula_email-emails {
+                width: 100%;
+            }
+            .tabula_wrap-form {
+                box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
+                background-color: #fff;
+                h2 {
+                    padding-top: 14px;
+                    font-size: 2rem;
+                }
+                padding: 0;
+                .tabula_wrapper {
+                    padding-top: 22px;
+                }
+                .wrapper-wrapper {
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+}
+@include responsive('large'){
+    #tabula_email .tabula_email-form{
+        padding: 20px;
+        padding-top: 30px;
+    }
+}

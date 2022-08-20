@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    font-size: 15px;
+    color: #181818;
+    background-color: #fff;
+}
+body {
+    font-weight: 400;
+    line-height: 1.8em;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+// animation
+.animate__delay-200ms {
+    animation-delay: 200ms;
+}
+.animate__delay-300ms {
+    animation-delay: 500ms;
+}
+.animate__delay-400ms {
+    animation-delay: 700ms;
+}
+.animate__delay-500ms {
+    animation-delay: 500ms;
+}
+.animate__delay-600ms {
+    animation-delay: 900ms;
+}
+.animate__delay-800ms {
+    animation-delay: 1100ms;
+}
+
