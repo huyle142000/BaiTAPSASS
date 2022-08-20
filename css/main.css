@@ -816,6 +816,7 @@ header #navbarNavDropdown {
   top: 20px;
 }
 #tabula_email .tabula_email-form .tabula_wrap-form .tabula_area-wrap textarea {
+  border-radius: 10px;
   transition: all 0.5s;
   font-size: 0.8em;
   width: 100%;
