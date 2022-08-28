@@ -2,7 +2,6 @@
 var headerNav = document.getElementById('header_tabula');
 window.addEventListener('scroll', function () {
     let scrollTops = document.getElementById('scrollTops');
-    console.log(scrollTops.getBoundingClientRect().top)
     if (Math.floor(scrollTops.getBoundingClientRect().top) <= 0) {
         headerNav.classList.add('show')
     }else{
@@ -40,7 +39,6 @@ window.addEventListener('resize', function (e) {
     let valueResize = 1280 - document.querySelector('body').clientWidth;
     var leftHome = tabulaSubHome.style.left
     tabulaSubHome.style.left = `${-375 + valueResize}px`
-    console.log(leftHome)
 });
 let valueResize = 1280 - document.querySelector('body').clientWidth;
 var leftHome = tabulaSubHome.style.left
